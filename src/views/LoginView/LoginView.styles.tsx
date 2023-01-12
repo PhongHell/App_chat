@@ -1,12 +1,15 @@
 import styled, { css } from 'styled-components';
 import { Typography, Box, ControlledTextField } from '@/ui-components';
 
-export const Wrapper = styled(Box)`
+export const WrapperLogin = styled(Box)`
   ${({ theme: { spacing, mediaQueries } }) => css`
-    padding: ${spacing(2)}px;
-
-    @media ${mediaQueries.lg} {
-      padding: ${spacing(4)}px;
+    &&& {
+      padding: ${spacing(2)}px;
+      height: 100vh;
+      alight-items: center;
+      @media ${mediaQueries.lg} {
+        padding: ${spacing(4)}px;
+      }
     }
   `}
 `;

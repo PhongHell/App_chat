@@ -29,6 +29,8 @@
 			"no-restricted-exports": "off",
 			"import/prefer-default-export": "off",
 			"react/jsx-props-no-spreading" : "off",
-			"default-param-last": "off"
+			"default-param-last": "off",
+            "react/destructuring-assignment" : "off",
+            "react/react-in-jsx-scope": "off"
     }
 }

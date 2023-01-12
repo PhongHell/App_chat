@@ -1,8 +1,7 @@
-import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useTheme, useMediaQuery } from '@mui/material';
-import { Grid, Container, LabelApp } from '@/ui-components';
-import { Wrapper, StyledForm, LoginField, Logo } from './LoginView.styles';
+import { LabelApp, FlexBox } from '@/ui-components';
+import { WrapperLogin, StyledForm, LoginField, Logo } from './LoginView.styles';
 import { LOGO_IMAGE } from '@/assets';
 
 type FieldValues = {
@@ -26,30 +25,27 @@ const LoginView = () => {
   };
 
   return (
-    <Wrapper>
-      <Container maxWidth="lg">
-        <Grid container>
-          <Grid item xs={12}>
-            <Logo src={LOGO_IMAGE} alt="logo" />
-          </Grid>
-          <Grid item xs={12}>
-            <StyledForm onSubmit={handleSubmit(onLogin)}>
-              <LabelApp>Username</LabelApp>
-              <LoginField
-                name="username"
-                textFieldProps={{ label: 'Username' }}
-                control={control}
-              />
-              <LoginField
-                name="password"
-                textFieldProps={{ label: 'Password' }}
-                control={control}
-              />
-            </StyledForm>
-          </Grid>
-        </Grid>
-      </Container>
-    </Wrapper>
+    <WrapperLogin>
+      <Logo src={LOGO_IMAGE} alt="logo" />
+      <StyledForm onSubmit={handleSubmit(onLogin)}>
+        <FlexBox>
+          <LabelApp required>Username</LabelApp>
+          <LoginField
+            name="username"
+            textFieldProps={{ label: 'Username' }}
+            control={control}
+          />
+        </FlexBox>
+        <FlexBox>
+          <LabelApp required>Username</LabelApp>
+          <LoginField
+            name="password"
+            textFieldProps={{ label: 'Password' }}
+            control={control}
+          />
+        </FlexBox>
+      </StyledForm>
+    </WrapperLogin>
   );
 };
 
