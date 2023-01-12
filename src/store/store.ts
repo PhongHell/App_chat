@@ -3,13 +3,8 @@ import createSagaMiddleware from 'redux-saga';
 import { rootReducer } from './reducers';
 import { rootSaga } from './sagas';
 
-const isProd = import.meta.env.PROD;
-
 const composeEnhancers =
-  (!isProd &&
-    typeof window !== 'undefined' &&
-    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ||
-  compose;
+  (window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ as typeof compose) || compose;
 
 const sagaMiddleware = createSagaMiddleware();
 
