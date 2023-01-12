@@ -6,3 +6,14 @@ export { TextField } from '@mui/material';
 export { ControlledTextField } from './ControlledTextField';
 export { Button } from '@mui/material';
 export { LabelApp } from '@/ui-components/LabelApp';
+export {
+  FlexBox,
+  FlexBoxAround,
+  FlexBoxBetween,
+  FlexBoxCenter,
+  FlexBoxEnd,
+  FlexBoxEvenly,
+  FlexBoxLeft,
+  FlexBoxRight,
+  FlexBoxStart,
+} from '@/ui-components/FlexBox';
