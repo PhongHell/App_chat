@@ -33,6 +33,6 @@ export const LoginField = styled(ControlledTextField)`
 `;
 
 export const Logo = styled.img`
-    height: 60px;
-    width: 100%;
+  height: 60px;
+  width: 60px;
 `;
